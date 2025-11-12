@@ -3,8 +3,8 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from "public" folder
-app.use(express.static(path.join(__dirname, "public")));
+// Using an absolute path to resolve / Get error with unstable workspace
+app.use(express.static(path.resolve(__dirname, "public")));
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
