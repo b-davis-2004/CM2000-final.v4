@@ -14,6 +14,9 @@ app.get("/", (req, res) => {
   res.render("main", { title: "Final" }); // render main.ejs
 });
 
+//add a 404 route
+// or seperate contact nav into its own page to better fit rubric criteria
+
 // Start server
 app.listen(8080);
 console.log("Server running at codio box URL");
