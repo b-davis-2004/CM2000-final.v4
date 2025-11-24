@@ -7,20 +7,23 @@ async function renderRecommendations(container) {
       {
         id: 101,
         title: "Pampers Size 1 Diapers",
-        price: 4.99,
-        image: "jpg/Pampers-Size-1.jpg"
+        price: 5.25,
+        image: "jpg/Pampers-Size-1.jpg",
+        view: "https://www.amazon.co.uk/Pampers-Premium-Protection-Nappies-2kg-5kg/dp/B08KPXS82J/ref=sr_1_17_uk_f3_0o_morri?crid=1HBL3QJDDJ896&dib=eyJ2IjoiMSJ9.yBwIta3b3h4ybxMgeqzk5pVFFe6NA61wVBzzWplBwH2EjSg70SIGWC442u0Fp34dtfijX9YKixkzun5fhSS9HumqHPxMHtOdqhBVtTNkHooRQHvGWoovUdmmMG1TInjZafhOdDu_3CNXTi3p2LdPWQEatCDXBPuNv12dpuzUB6LgHZXj1Z1hczajpmFhV399Xu0hFhFXHrDmAkINNvQ9PC64yw05Uf4IOyHVFklQ41P0iUm1QuNZu_6CsWQBMz8vodSw6w7jKEH4LOt8jTmrgbAes5UkwSr1m2TbYWlkllc.5bIvADXlnMZutccYjgFz5bjYTepOUAFsvl2r2oLBs7I&dib_tag=se&keywords=pampers+size+1&qid=1763985466&sprefix=pampers%2Caps%2C280&sr=8-17"
       },
       {
         id: 102,
         title: "Huggies Natural Care Wipes",
         price: 5.49,
-        image: "jpg/Baby-Wipes.jpg"
+        image: "jpg/Baby-Wipes.jpg",
+        view: "https://www.amazon.co.uk/Huggies-Natural-Care-Quads-Wipes/dp/B01C2LQINW/ref=sr_1_8?crid=2LYFOJVBD69II&dib=eyJ2IjoiMSJ9.q820LXMxC1KZy3tMmIXRiGmNGFlj_81dijrXmMipIaO4IfUGQi1Aa-tMSpvzXXgQllm56R6j0lX07O_6btrEXFxMMeLYa6TfqNRlbUMgkrjo6-gVRBiF7zwz_4urBeS9AZk9tDZOXZku8aWhHG61TlLhJsky1qCqlPPvelPAV4CLlavyffwQy7z3lbj4ZjyplSoWJMKmEx4SpO1Mm_N_PQLniz-LcNJr6bZolRQ9XYw0T7fcwHKWh2y1Bk92-XC7dLSvb7Gy9WeU4r3QfT8yWzObmrUw184DbExGZ0PgxmE.Iji3HVi5OBTMaLa8y-mWhbFRQZKiJUEgWoR0IoRQPYE&dib_tag=se&keywords=huggies+natural+care+baby+wipes+56+count&qid=1763985579&sprefix=huggies+natural+care+baby+wipes+56+count%2Caps%2C181&sr=8-8"
       },
       {
         id: 103,
         title: "Johnson's Baby Shampoo",
-        price: 2.99,
-        image: "jpg/Johnsons-Baby-Shampoo.jpg"
+        price: 5.60,
+        image: "jpg/Johnsons-Baby-Shampoo.jpg",
+        view: "https://www.amazon.co.uk/3574660453072-Johnsons-Baby-Shampoo-50/dp/B00WURKEZW/ref=sr_1_6?crid=3QJ43HWJQ6LQP&dib=eyJ2IjoiMSJ9.AdcIO_5QdOtGwm4qfC4tQqHxh8DUMqvKeszoYsWCtk2x1DJsHGREspWrtpPyOb_Zb08JqIVftWd9LwEBcU6spDWKibw1QzRQ-ZGUOW009GOt9OXtQLpMfeeTFxC_xaX5AHMb9DdEOamFZSjgjBy1JTiv5tYM10XsXMyU-q_cSQLpqVDibZW11kHCIgLiIUxSiugGIjSLIiQHkBX1JQxJJQqxrNhsiGChHc8x-zZpLgVxK0pDl1nH5AV3fstX7kisXO4M1Na0sS2awIbdNfH5U_dzR8agGyXuDsF3g2eCwi0.R8jePjL0GYZPhQsuyT5l0YpAp1MajapwOP_sSsYrupw&dib_tag=se&keywords=johnsons+baby+shampoo&qid=1763985617&sprefix=johnsons+baby%2Caps%2C183&sr=8-6"
       }
     ];
 
@@ -42,7 +45,7 @@ async function renderRecommendations(container) {
               <div class="card-body">
                 <h6 class="card-title">${p.title}</h6>
                 <p class="text-primary fw-bold">£${p.price}</p>
-                <a href="#" class="btn btn-primary btn-sm">View</a>
+                <a href="#" class="btn btn-primary btn-sm">${p.View}</a>
               </div>
             </div>
           </div>
