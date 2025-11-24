@@ -27,7 +27,7 @@ async function renderRecommendations(container) {
       }
     ];
 
-    // Fetching products from Fake Store API
+    // Fetching products from Fake Store API - specifying women's clothing and only 3 products
     const res = await fetch("https://fakestoreapi.com/products/category/women's%20clothing?limit=3");
     const apiProducts = await res.json();
 
@@ -205,28 +205,28 @@ function drawChart() {
   image.src = 'jpg/donut-pic.png';
 
   //this plugin is specifically for the image in the center of the stock donut chart
-const plugin = {
-  id: 'prettyDoughnut',
-  beforeDraw: (chartInstance) => {
-    if (image.complete) {
-      const ctx = chartInstance.ctx;
-      const { top, left, width, height } = chartInstance.chartArea;
+  const plugin = {
+    id: 'prettyDoughnut',
+    beforeDraw: (chartInstance) => {
+      if (image.complete) {
+        const ctx = chartInstance.ctx;
+        const { top, left, width, height } = chartInstance.chartArea;
 
-      //adjusting the size of the image using scale to fit within doughnut
-      const scale = 0.3;
-      const imgWidth = width * scale;
-      const imgHeight = height * scale;
+        //adjusting the size of the image using scale to fit within doughnut
+        const scale = 0.3;
+        const imgWidth = width * scale;
+        const imgHeight = height * scale;
 
-      //centering using scaled dimensions
-      const x = left + (width / 2) - (imgWidth / 2);
-      const y = top + (height / 2) - (imgHeight / 2);
+        //centering using scaled dimensions
+        const x = left + (width / 2) - (imgWidth / 2);
+        const y = top + (height / 2) - (imgHeight / 2);
 
-      ctx.drawImage(image, x, y, imgWidth, imgHeight);
-    } else {
-      image.onload = () => chartInstance.draw();
+        ctx.drawImage(image, x, y, imgWidth, imgHeight);
+      } else {
+        image.onload = () => chartInstance.draw();
+      }
     }
-  }
-};
+  };
 
   chart = new Chart(ctx, {
     type: "doughnut",
@@ -309,7 +309,7 @@ function showAddModal(editIndex = null) {
     const name = modalHTML.querySelector("#itemName").value.trim();
     const have = parseInt(modalHTML.querySelector("#itemHave").value);
     const need = parseInt(modalHTML.querySelector("#itemNeed").value);
-    
+
     if (editIndex !== null) {
       inventory[editIndex] = { name, have, need };
     } else {
