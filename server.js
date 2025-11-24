@@ -15,7 +15,11 @@ app.get("/", (req, res) => {
 });
 
 //add a 404 route
+app.use((req, res, next) => {
+  res.status(404).render("404", { title: "404 - Page Not Found" });
+});
 // or seperate contact nav into its own page to better fit rubric criteria
+
 
 // Start server
 app.listen(8080);
