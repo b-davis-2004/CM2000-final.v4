@@ -45,7 +45,7 @@ async function renderRecommendations(container) {
               <div class="card-body">
                 <h6 class="card-title">${p.title}</h6>
                 <p class="text-primary fw-bold">£${p.price}</p>
-                <a href="#" class="btn btn-primary btn-sm">${p.View}</a>
+                <a href="${p.view}" class="btn btn-primary btn-sm">View</a>
               </div>
             </div>
           </div>
