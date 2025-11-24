@@ -291,6 +291,7 @@ function showAddModal(editIndex = null) {
   const modal = new bootstrap.Modal(modalHTML);
   modal.show();
 
+  // If editing, pre-fill form fields
   if (editIndex !== null) {
     const item = inventory[editIndex];
     modalHTML.querySelector("#itemName").value = item.name;
@@ -298,13 +299,14 @@ function showAddModal(editIndex = null) {
     modalHTML.querySelector("#itemNeed").value = item.need;
   }
 
+  // Form submission handler
   modalHTML.querySelector("#itemForm").addEventListener("submit", (e) => {
     e.preventDefault();
 
     const name = modalHTML.querySelector("#itemName").value.trim();
     const have = parseInt(modalHTML.querySelector("#itemHave").value);
     const need = parseInt(modalHTML.querySelector("#itemNeed").value);
-
+    
     if (editIndex !== null) {
       inventory[editIndex] = { name, have, need };
     } else {
