@@ -22,6 +22,5 @@ app.use((req, res, next) => {
 
 
 // Start server
-//port changed from 8080 to 3000 to resolve overloaded port error on codio
-app.listen(3000);
-console.log("Server running at codio box URL. https://jamesllama-mysteryvega-3000.codio.io/");
+app.listen(8080);
+console.log("Server running at codio box URL. https://jamesllama-mysteryvega-8080.codio.io/");
