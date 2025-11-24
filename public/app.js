@@ -68,6 +68,7 @@ async function renderRecommendations(container) {
         `).join("")}
       </div>
     `;
+    //error handling for API specifically
   } catch (error) {
     container.innerHTML = `<p class="text-danger">Failed to load product recommendations.</p>`;
   }
